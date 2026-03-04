@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitOS - 피트니스 센터 All-in-One 플랫폼</title>
+    <title>DipFit - AI·IoT 기반 웰니스 통합 플랫폼</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,8 +26,8 @@
                 extend: {
                     fontFamily: { sans: ['Noto Sans KR', 'sans-serif'] },
                     colors: { 
-                        primary: '#1e3a8a', // blue-900
-                        secondary: '#3b82f6', // blue-500
+                        primary: '#4f46e5', // indigo-600
+                        secondary: '#6366f1', // indigo-500
                         accent: '#10b981', // emerald-500
                         dark: '#0f172a', // slate-900
                         light: '#f8fafc' // slate-50
@@ -36,7 +36,7 @@
             }
         }
         
-        // Mermaid 초기화 (에러 및 폰트 렌더링 최적화)
+        // Mermaid 초기화 (에러 및 폰트 렌더링 최적화, 최신 문법 호환)
         mermaid.initialize({ 
             startOnLoad: true, 
             theme: 'base', 
@@ -45,7 +45,7 @@
                 primaryColor: '#f8fafc', 
                 primaryTextColor: '#0f172a', 
                 primaryBorderColor: '#cbd5e1', 
-                lineColor: '#3b82f6' 
+                lineColor: '#6366f1' 
             } 
         });
     </script>
@@ -88,7 +88,7 @@
         }
         
         .gradient-text {
-            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            background: linear-gradient(135deg, #4f46e5, #10b981);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -105,23 +105,23 @@
     <!-- Header / Hero Section -->
     <header class="bg-dark text-white pt-20 pb-16 relative overflow-hidden">
         <div class="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-secondary blur-3xl opacity-20"></div>
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary blur-3xl opacity-20"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex items-center justify-between mb-12">
                 <div class="flex items-center gap-3">
-                    <i class="fas fa-cube text-secondary text-4xl"></i>
-                    <h1 class="text-3xl font-black tracking-tight">Fit<span class="text-secondary">OS</span></h1>
+                    <i class="fas fa-wave-square text-accent text-4xl"></i>
+                    <h1 class="text-3xl font-black tracking-tight">Dip<span class="text-accent">Fit</span></h1>
                 </div>
             </div>
             
             <div class="text-center max-w-4xl mx-auto">
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
                     피트니스 센터 운영의 <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">완벽한 AI·IoT 통합 운영체제</span>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-emerald-400">완벽한 AI·IoT 통합 운영체제</span>
                 </h2>
                 <p class="text-lg text-slate-300 mb-8 leading-relaxed">
-                    단순 회원 관리를 넘어선 '센터 결제/정산 + 데이터 포터빌리티 + AI/IoT 가드레일' 솔루션.<br>
-                    Sprintapp.pro 등 기존 SaaS의 한계를 극복하고 센터, 트레이너, 회원을 단일 생태계로 연결합니다.
+                    깊이(Deep) 있는 데이터로 가볍게(Dip) 쓰는 웰니스 플랫폼.<br>
+                    결제 코어(OmniWell) + 통제형 AI 에이전트(Seeker) 기반으로 센터, 트레이너, 회원을 단일 생태계로 연결합니다.
                 </p>
             </div>
         </div>
@@ -132,7 +132,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav class="flex overflow-x-auto custom-scrollbar whitespace-nowrap" id="tab-nav">
                 <button onclick="switchTab('overview')" class="tab-btn active px-6 py-4 font-bold text-sm border-b-4 border-primary text-primary hover:bg-slate-50 transition-colors" data-target="overview">
-                    <i class="fas fa-compress-arrows-alt mr-2"></i>개요 & 전략
+                    <i class="fas fa-compress-arrows-alt mr-2"></i>개요 & 브랜딩
                 </button>
                 <button onclick="switchTab('features')" class="tab-btn px-6 py-4 font-bold text-sm border-b-4 border-transparent text-slate-500 hover:text-primary hover:bg-slate-50 transition-colors" data-target="features">
                     <i class="fas fa-mobile-alt mr-2"></i>기능 & 모의기
@@ -158,41 +158,41 @@
         <div class="tab-container">
             
             <!-- ==========================================
-                 TAB 1: 개요 & 전략 (Overview & Strategy)
+                 TAB 1: 개요 & 브랜딩 (Overview & Strategy)
             =========================================== -->
             <div id="overview" class="tab-content active">
                 <div class="mb-10 text-center">
-                    <h2 class="text-3xl font-extrabold text-slate-900">플랫폼 개요 및 벤치마크 확장 전략</h2>
-                    <p class="mt-3 text-slate-600">경쟁사(sprintapp.pro 등) 분석을 통한 차별화 및 카운터 무브 전략</p>
+                    <h2 class="text-3xl font-extrabold text-slate-900">플랫폼 코어 및 벤치마크 역공 전략</h2>
+                    <p class="mt-3 text-slate-600">Sprintapp.pro 전수 분석 기반 차별화 (OmniWell & Seeker)</p>
                 </div>
 
                 <!-- USP Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                    <div class="glass-panel p-6 rounded-2xl">
-                        <div class="w-12 h-12 bg-blue-100 text-secondary rounded-lg flex items-center justify-center mb-4 text-xl"><i class="fas fa-network-wired"></i></div>
-                        <h3 class="text-lg font-bold mb-2 text-slate-800">센터 ERP 코어 선점</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">경쟁사가 (예정)으로 미뤄둔 결제/매출/정산 기능을 MVP 코어로 즉시 내장하여, 센터 결제자(Owner)의 1차 도입 명분을 확보합니다.</p>
+                    <div class="glass-panel p-6 rounded-2xl border-t-4 border-indigo-500">
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-4 text-xl"><i class="fas fa-network-wired"></i></div>
+                        <h3 class="text-lg font-bold mb-2 text-slate-800">OmniWell (센터 ERP 코어)</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">경쟁사가 (예정)으로 미뤄둔 결제/매출/정산을 MVP 코어로 선점. 센터 고유코드와 트레이너 좌석(Seat)을 완벽 분리하여 센터 결제자의 도입 명분을 확보합니다.</p>
                     </div>
-                    <div class="glass-panel p-6 rounded-2xl">
-                        <div class="w-12 h-12 bg-emerald-100 text-accent rounded-lg flex items-center justify-center mb-4 text-xl"><i class="fas fa-id-card"></i></div>
-                        <h3 class="text-lg font-bold mb-2 text-slate-800">회원 계정 기반 데이터 이식성</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">센터 중심의 데이터 귀속에서 벗어나, 회원 본인 계정을 통한 데이터 소유 및 '동의 기반 타 센터 공유'로 신뢰 자산을 구축합니다.</p>
+                    <div class="glass-panel p-6 rounded-2xl border-t-4 border-emerald-500">
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mb-4 text-xl"><i class="fas fa-robot"></i></div>
+                        <h3 class="text-lg font-bold mb-2 text-slate-800">Seeker (통제형 AI 에이전트)</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">음성 상담 전사, 위험 신호(수면 급감 등)를 자동 탐지하되, 최종 결제/처방은 코치가 승인(Human-in-the-loop)하여 품질과 규제 리스크를 제어합니다.</p>
                     </div>
-                    <div class="glass-panel p-6 rounded-2xl">
-                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-4 text-xl"><i class="fas fa-user-shield"></i></div>
-                        <h3 class="text-lg font-bold mb-2 text-slate-800">가드레일 기반 AI (Human-in-the-loop)</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">AI의 과도한 권한(자동 결제/수정)을 막고, 프롬프트 인젝션을 방어하며 '초안 및 추천'에 머물게 하여 의료/보안 리스크를 완벽 제어합니다.</p>
+                    <div class="glass-panel p-6 rounded-2xl border-t-4 border-purple-500">
+                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mb-4 text-xl"><i class="fas fa-id-card"></i></div>
+                        <h3 class="text-lg font-bold mb-2 text-slate-800">회원 주권 데이터 이식성</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">센터 귀속에서 벗어나, 회원이 센터를 옮겨도 계정을 유지합니다. 명시적 동의(범위/기간) 기반으로만 타 센터에 공유해 신뢰 락인(Lock-in)을 만듭니다.</p>
                     </div>
                 </div>
 
                 <!-- Competitor Benchmark Table -->
-                <h3 class="text-2xl font-bold mb-6 text-slate-800 border-l-4 border-primary pl-4">경쟁사 오퍼링 및 카운터 전략 비교</h3>
+                <h3 class="text-2xl font-bold mb-6 text-slate-800 border-l-4 border-primary pl-4">글로벌 및 국내 경쟁사 카운터 전략 비교</h3>
                 <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-x-auto custom-scrollbar mb-10">
                     <table class="min-w-full divide-y divide-slate-200">
                         <thead class="bg-slate-50">
                             <tr>
                                 <th class="px-6 py-4 text-left text-sm font-bold text-slate-700">구분</th>
-                                <th class="px-6 py-4 text-left text-sm font-bold text-primary bg-blue-50/50">FitOS (본 프로젝트 제안)</th>
+                                <th class="px-6 py-4 text-left text-sm font-bold text-primary bg-indigo-50/50">DipFit (본 프로젝트)</th>
                                 <th class="px-6 py-4 text-left text-sm font-bold text-slate-500">Sprintapp.pro (국내)</th>
                                 <th class="px-6 py-4 text-left text-sm font-bold text-slate-500">TrueCoach / ABC Trainerize</th>
                             </tr>
@@ -200,39 +200,30 @@
                         <tbody class="divide-y divide-slate-200 bg-white">
                             <tr>
                                 <td class="px-6 py-4 font-semibold text-slate-800">포지셔닝</td>
-                                <td class="px-6 py-4 font-medium text-primary bg-blue-50/50">세일즈 OS + 데이터 허브 + AI 보조 코칭</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">식단피드백·운동일지 자동화 (업무 1/2 감축 주장)</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">클라이언트 수 기반 매니지먼트 및 스튜디오 관리</td>
+                                <td class="px-6 py-4 font-medium text-primary bg-indigo-50/50">센터 세일즈 OS + 디지털 트윈 + AI 보조</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">식단피드백·운동일지 자동화 중심</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">클라이언트 수 기반 코칭 매니지먼트</td>
                             </tr>
                             <tr>
                                 <td class="px-6 py-4 font-semibold text-slate-800">결제 및 정산(ERP)</td>
-                                <td class="px-6 py-4 font-medium text-primary bg-blue-50/50">MVP 포함 (정기구독, 결제 수수료, 미수 관리)</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">매출 관리/센터 통계 "(예정)" 으로 고지</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">Stripe 등 외부 애드온 의존 (월 $10 추가 등)</td>
+                                <td class="px-6 py-4 font-medium text-primary bg-indigo-50/50">코어 빌트인 (구독, 정산, 결제 수수료)</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">매출 관리/센터 통계 "(예정)"</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">Stripe 등 외부 애드온 의존</td>
                             </tr>
                             <tr>
-                                <td class="px-6 py-4 font-semibold text-slate-800">데이터 소유/포터빌리티</td>
-                                <td class="px-6 py-4 font-medium text-primary bg-blue-50/50">회원 계정 소유, 센터 이동 시 선택적 권한 공유</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">센터 귀속 (코치 이탈 대비 데이터 연속성 강조)</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">플랫폼 자체 귀속 및 종속성 높음</td>
+                                <td class="px-6 py-4 font-semibold text-slate-800">데이터 소유권</td>
+                                <td class="px-6 py-4 font-medium text-primary bg-indigo-50/50">회원 소유 기반 타 센터 선택적 공유(이식성)</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">센터 귀속 (코치 이탈 방어용 강조)</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">플랫폼 종속 (락인 강제)</td>
                             </tr>
                             <tr>
-                                <td class="px-6 py-4 font-semibold text-slate-800">AI 운영 형태</td>
-                                <td class="px-6 py-4 font-medium text-primary bg-blue-50/50">OWASP 기반 가드레일 제어 + 로컬/API STT</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">하이브리드 (식단분석 매니저가 검수 + AI 초안 보조)</td>
-                                <td class="px-6 py-4 text-sm text-slate-600">체크인 AI, 식단 생성기 등 모듈별 옵션 제공</td>
+                                <td class="px-6 py-4 font-semibold text-slate-800">AI 및 보안</td>
+                                <td class="px-6 py-4 font-medium text-primary bg-indigo-50/50">OWASP 가드레일 + 유출/오남용 가시화</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">하이브리드 (사람 검수 + AI 초안 보조)</td>
+                                <td class="px-6 py-4 text-sm text-slate-600">체크인 AI, 식단 생성기 애드온</td>
                             </tr>
                         </tbody>
                     </table>
-                </div>
-                
-                <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-6">
-                    <h4 class="font-bold text-indigo-900 flex items-center mb-2"><i class="fas fa-lightbulb text-indigo-500 mr-2"></i>핵심 카운터 무브 (Counter Move)</h4>
-                    <ul class="list-disc pl-5 space-y-2 text-indigo-800 text-sm">
-                        <li>경쟁사가 템플릿(온라인 챌린지 패키지)으로 판매하는 요소를 <strong>마켓플레이스 또는 코어 기능</strong>으로 소프트웨어화.</li>
-                        <li>IoT 장치(체성분, 스마트락커)를 직접 제조하지 않고, <strong>파트너 연동/리스 모델(Gateway)</strong>로 흡수하여 하드웨어 CAPEX를 OPEX화.</li>
-                        <li>모든 AI 로직은 <strong>센터의 정책 엔진 (룰, 승인, 세이프티) 아래에서만 실행</strong>되도록 통제권 확보.</li>
-                    </ul>
                 </div>
             </div>
 
@@ -241,35 +232,35 @@
             =========================================== -->
             <div id="features" class="tab-content">
                 <div class="mb-10 text-center">
-                    <h2 class="text-3xl font-extrabold text-slate-900">모듈형 기능 설계 및 동적 모의기</h2>
-                    <p class="mt-3 text-slate-600">엑셀 로직(Mifflin-St Jeor)의 상업적 재정의 및 Daily Plan 구조화</p>
+                    <h2 class="text-3xl font-extrabold text-slate-900">Wellness EZ 철학 및 동적 웰니스 모의기</h2>
+                    <p class="mt-3 text-slate-600">디지털 트윈 기반 상업용 매크로 엔진 및 UI/UX 원칙</p>
                 </div>
 
-                <!-- Daily Plan Structure -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-bold mb-6 text-slate-800 border-l-4 border-accent pl-4">Daily Plan 엔티티 모듈화</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="bg-white p-4 border border-slate-200 rounded-xl shadow-sm text-center">
-                            <i class="fas fa-bullseye text-2xl text-red-400 mb-2"></i><p class="font-bold text-sm">Today's Goal</p><p class="text-xs text-slate-500">체크리스트화</p>
-                        </div>
-                        <div class="bg-white p-4 border border-slate-200 rounded-xl shadow-sm text-center">
-                            <i class="fas fa-smile text-2xl text-yellow-400 mb-2"></i><p class="font-bold text-sm">Mood & Weather</p><p class="text-xs text-slate-500">5단계 이모지/아이콘</p>
-                        </div>
-                        <div class="bg-white p-4 border border-slate-200 rounded-xl shadow-sm text-center">
-                            <i class="fas fa-shoe-prints text-2xl text-blue-400 mb-2"></i><p class="font-bold text-sm">Steps & Sleep</p><p class="text-xs text-slate-500">IoT / 수기 연동</p>
-                        </div>
-                        <div class="bg-white p-4 border border-slate-200 rounded-xl shadow-sm text-center">
-                            <i class="fas fa-clock text-2xl text-purple-400 mb-2"></i><p class="font-bold text-sm">Time-Blocking</p><p class="text-xs text-slate-500">5am~12am 스케줄</p>
-                        </div>
+                <!-- Wellness EZ UI Principles -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                    <div class="bg-indigo-900 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+                        <i class="fas fa-robot absolute right-0 bottom-0 text-indigo-700 text-6xl opacity-30 -mr-4 -mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2 text-indigo-200">Seeker-First</h3>
+                        <p class="text-sm">사용자가 데이터를 찾지 않습니다. 상단 'Seeker Insight'에 "오늘은 수면이 부족하니 강도를 낮추세요" 등 행동 지침을 즉시 제시합니다.</p>
+                    </div>
+                    <div class="bg-emerald-900 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+                        <i class="fas fa-microphone absolute right-0 bottom-0 text-emerald-700 text-6xl opacity-30 -mr-4 -mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2 text-emerald-200">The One-Touch Mic</h3>
+                        <p class="text-sm">"입력은 어렵지만 말하기는 쉽다." 하단 플로팅 마이크로 "점심 닭가슴살 먹었어" 등 식단/운동 기록과 상담 녹취를 통합합니다.</p>
+                    </div>
+                    <div class="bg-slate-800 text-white p-5 rounded-2xl shadow-lg relative overflow-hidden">
+                        <i class="fas fa-layer-group absolute right-0 bottom-0 text-slate-600 text-6xl opacity-30 -mr-4 -mb-4"></i>
+                        <h3 class="font-bold text-lg mb-2 text-slate-300">Glassmorphism & Depth</h3>
+                        <p class="text-sm">다크모드(Slate) 베이스에 유리 질감과 네온 포인트(Indigo/Emerald)로 복잡한 그래프 대신 직관적인 진행링(Ring)을 구현합니다.</p>
                     </div>
                 </div>
 
                 <!-- Interactive Calculator Mockup -->
-                <h3 class="text-2xl font-bold mb-6 text-slate-800 border-l-4 border-primary pl-4">동적 칼로리 및 매크로 분배 모의기 (IP 우회 재정의)</h3>
+                <h3 class="text-2xl font-bold mb-6 text-slate-800 border-l-4 border-primary pl-4">디지털 트윈: 동적 매크로 산출 & 분배 엔진 (Mifflin-St Jeor)</h3>
                 <div class="flex flex-col lg:flex-row gap-8">
                     <!-- Inputs -->
                     <div class="flex-1 glass-panel p-6 rounded-2xl">
-                        <h4 class="font-bold text-lg mb-4 text-slate-800 border-b pb-2">회원 프로필 & 센터 정책 입력</h4>
+                        <h4 class="font-bold text-lg mb-4 text-slate-800 border-b pb-2">회원 Traits (정적 특성) & State</h4>
                         <form id="calcForm" class="space-y-4 text-sm">
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
@@ -318,31 +309,31 @@
                                 </div>
                             </div>
                             <div>
-                                <label class="block font-medium text-slate-700 mb-1">오늘의 상태</label>
+                                <label class="block font-medium text-slate-700 mb-1">오늘의 스케줄</label>
                                 <div class="flex gap-4">
-                                    <label class="flex items-center"><input type="radio" name="dayType" value="training" checked class="mr-2"> 트레이닝 데이 (근력)</label>
-                                    <label class="flex items-center"><input type="radio" name="dayType" value="rest" class="mr-2"> 휴식일 (Rest Day)</label>
+                                    <label class="flex items-center"><input type="radio" name="dayType" value="training" checked class="mr-2"> 훈련일 (5끼 기준)</label>
+                                    <label class="flex items-center"><input type="radio" name="dayType" value="rest" class="mr-2"> 휴식일 (4끼 기준)</label>
                                 </div>
                             </div>
-                            <button type="button" onclick="calculateDynamic()" class="w-full bg-primary hover:bg-secondary text-white font-bold py-3 rounded-xl transition shadow-md mt-4">
-                                산출 및 분배 시뮬레이션
+                            <button type="button" onclick="calculateDynamic()" class="w-full bg-primary hover:bg-indigo-700 text-white font-bold py-3 rounded-xl transition shadow-md mt-4">
+                                Response: 맞춤형 처방 생성
                             </button>
                         </form>
                     </div>
 
                     <!-- Outputs -->
                     <div class="flex-1 bg-dark p-6 rounded-2xl text-white shadow-lg relative overflow-hidden">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-secondary blur-3xl opacity-20 rounded-full"></div>
-                        <h4 class="font-bold text-lg mb-4 text-white border-b border-slate-700 pb-2">AI 코칭 및 분배 결과</h4>
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-primary blur-3xl opacity-20 rounded-full"></div>
+                        <h4 class="font-bold text-lg mb-4 text-white border-b border-slate-700 pb-2">OmniWell 정책 기반 결과</h4>
                         
                         <div class="flex gap-4 mb-6">
                             <div class="flex-1 bg-slate-800 rounded-xl p-4 text-center">
-                                <p class="text-xs text-slate-400 mb-1">기초대사량 (Mifflin-St Jeor)</p>
-                                <p class="text-2xl font-bold text-blue-400"><span id="outBMR">0</span><span class="text-sm font-normal"> kcal</span></p>
+                                <p class="text-xs text-slate-400 mb-1">기초대사량 (BMR)</p>
+                                <p class="text-2xl font-bold text-indigo-400"><span id="outBMR">0</span><span class="text-sm font-normal"> kcal</span></p>
                             </div>
-                            <div class="flex-1 bg-slate-800 rounded-xl p-4 text-center border border-secondary">
-                                <p class="text-xs text-slate-400 mb-1">목표 섭취 타겟 (TDEE * 목표)</p>
-                                <p class="text-2xl font-bold text-emerald-400"><span id="outTarget">0</span><span class="text-sm font-normal"> kcal</span></p>
+                            <div class="flex-1 bg-slate-800 rounded-xl p-4 text-center border border-indigo-500">
+                                <p class="text-xs text-slate-400 mb-1">1일 목표 (TDEE)</p>
+                                <p class="text-2xl font-bold text-accent"><span id="outTarget">0</span><span class="text-sm font-normal"> kcal</span></p>
                             </div>
                         </div>
 
@@ -350,7 +341,7 @@
                             <p class="text-sm font-bold text-slate-300">매크로 할당 (단백질: 제지방 2.2g / 지방: 제지방 1.0g 설정 기준)</p>
                             <div class="flex items-center justify-between text-sm bg-slate-800 px-4 py-2 rounded-lg">
                                 <span class="w-16">단백질</span>
-                                <div class="flex-1 mx-4 h-2 bg-slate-700 rounded-full"><div class="h-2 bg-blue-500 rounded-full" style="width: 30%"></div></div>
+                                <div class="flex-1 mx-4 h-2 bg-slate-700 rounded-full"><div class="h-2 bg-indigo-500 rounded-full" style="width: 30%"></div></div>
                                 <span class="w-12 text-right font-bold"><span id="outPro">0</span>g</span>
                             </div>
                             <div class="flex items-center justify-between text-sm bg-slate-800 px-4 py-2 rounded-lg">
@@ -366,7 +357,7 @@
                         </div>
 
                         <div class="bg-slate-800 rounded-xl p-4">
-                            <p class="text-sm font-bold text-slate-300 mb-2">식사 분배 템플릿 (Meal Distribution 4끼 기준)</p>
+                            <p class="text-sm font-bold text-slate-300 mb-2">JSON 분배 템플릿 (Meal Distribution)</p>
                             <ul id="distList" class="text-xs space-y-2 text-slate-400">
                                 <!-- Injected by JS -->
                             </ul>
@@ -380,94 +371,86 @@
             =========================================== -->
             <div id="architecture" class="tab-content">
                 <div class="mb-10 text-center">
-                    <h2 class="text-3xl font-extrabold text-slate-900">시스템 아키텍처 및 데이터베이스 (DDD)</h2>
-                    <p class="mt-3 text-slate-600">TypeScript, 멀티테넌트 PostgreSQL, MSA 지향 모듈 구조</p>
+                    <h2 class="text-3xl font-extrabold text-slate-900">도메인 주도 설계(DDD) 및 아키텍처</h2>
+                    <p class="mt-3 text-slate-600">TypeScript, 멀티테넌트 PostgreSQL, 단일 언어 풀스택 구조</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                     <!-- System Architecture Diagram -->
                     <div class="glass-panel p-6 rounded-2xl overflow-x-auto w-full">
-                        <h3 class="font-bold text-lg mb-4 text-slate-800">플랫폼 파이프라인 아키텍처</h3>
+                        <h3 class="font-bold text-lg mb-4 text-slate-800">플랫폼 파이프라인 (NestJS Monolith)</h3>
                         <div class="mermaid text-sm">
                             flowchart TB
-                              subgraph Clients ["사용자 접점"]
-                                W["Web Admin Portal"]
-                                D["Desktop Electron"]
-                                M["Mobile App"]
-                              end
-                              subgraph Edge ["Edge & API"]
-                                GW["API Gateway / BFF"]
-                              end
-                              subgraph Core ["Bounded Contexts"]
-                                AUTH["Tenancy & IAM"]
-                                BILL["Billing & Payments"]
-                                COACH["Coaching & Workout"]
-                                VOICE["Voice Pipeline"]
-                              end
-                              subgraph Data ["Data Persistence"]
-                                PG[("PostgreSQL 멀티테넌트")]
-                                OBJ[("Object Storage")]
-                                LOG[("Audit Event Log")]
-                              end
-                              subgraph AI ["AI & Integrations"]
-                                STT["STT (Local/API)"]
-                                LLM["LLM Orchestrator"]
-                                IOT["IoT Gateways"]
-                              end
-                              
-                              Clients --> GW
-                              GW --> AUTH
-                              GW --> BILL
-                              GW --> COACH
-                              GW --> VOICE
-                              AUTH --> PG
-                              BILL --> PG
-                              COACH --> PG
-                              VOICE --> OBJ
-                              VOICE --> STT
-                              COACH --> LLM
-                              IOT --> GW
-                              GW -.-> LOG
+                                subgraph Clients ["사용자 클라이언트"]
+                                    W["Web (Admin/OmniWell)"]
+                                    MOB["Mobile (RN/Expo)"]
+                                    DESK["Desktop (Electron)"]
+                                end
+                                subgraph Gateway ["API Gateway"]
+                                    GW["BFF / Gateway"]
+                                end
+                                subgraph Core ["Core Services (NestJS)"]
+                                    IAM["Identity & Auth"]
+                                    TEN["Tenancy (OmniWell)"]
+                                    MEM["Membership/Coaching"]
+                                    BILL["Billing"]
+                                    VOICE["Voice Orchestrator"]
+                                end
+                                subgraph Data ["Data Layer"]
+                                    PG[("PostgreSQL")]
+                                    OBJ[("Object Storage")]
+                                    LOG[("Audit Log")]
+                                end
+                                subgraph AI ["AI & Seeker"]
+                                    STT["STT (Local/API)"]
+                                    LLM["LLM Provider"]
+                                    SAFE["Safety Filter"]
+                                end
+
+                                Clients --> GW
+                                GW --> IAM & TEN & MEM & BILL & VOICE
+                                DESK -. "Secure IPC" .-> VOICE
+                                IAM & TEN & MEM & BILL --> PG
+                                VOICE --> OBJ
+                                VOICE --> STT
+                                MEM --> SAFE --> LLM
                         </div>
                     </div>
 
                     <!-- DDD Bounded Contexts -->
                     <div class="flex flex-col gap-6 w-full overflow-hidden">
                         <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-                            <h3 class="font-bold text-lg mb-4 text-slate-800">도메인 주도 설계 (DDD) 경계</h3>
+                            <h3 class="font-bold text-lg mb-4 text-slate-800">DDD Bounded Contexts (비즈니스 용어 1:1)</h3>
                             <ul class="space-y-3 text-sm text-slate-600">
-                                <li><span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded">Tenancy & IAM</span> Center, CenterCode, TrainerSubCode, RBAC 정책</li>
-                                <li><span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded">Membership</span> Enrollment, Attendance, TrainerAssignment</li>
-                                <li><span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded">Billing</span> Subscription, Invoice, PaymentTransaction</li>
-                                <li><span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded">Coaching</span> WorkoutPlan, DailyPlan, NutritionPlan</li>
-                                <li><span class="font-bold text-primary bg-blue-50 px-2 py-1 rounded">Governance</span> Consent (데이터 공유 동의), AuditEvent</li>
+                                <li><span class="font-bold text-indigo-700 bg-indigo-50 px-2 py-1 rounded">Identity</span> UserAccount, Auth, MFA</li>
+                                <li><span class="font-bold text-indigo-700 bg-indigo-50 px-2 py-1 rounded">Tenancy (OmniWell)</span> Center, TrainerSubCode, Policy</li>
+                                <li><span class="font-bold text-indigo-700 bg-indigo-50 px-2 py-1 rounded">Coaching Ops</span> Membership, Attendance, Schedule</li>
+                                <li><span class="font-bold text-indigo-700 bg-indigo-50 px-2 py-1 rounded">Seeker AI</span> Recording, Transcript, Summary, Prescription</li>
+                                <li><span class="font-bold text-indigo-700 bg-indigo-50 px-2 py-1 rounded">Governance</span> Consent (데이터 공유), AuditEvent</li>
                             </ul>
                         </div>
                         
                         <div class="bg-slate-900 p-6 rounded-2xl shadow-lg text-slate-300 w-full overflow-x-auto custom-scrollbar">
-                            <h3 class="font-bold text-lg mb-4 text-white">핵심 SQL 스키마 요약 (PostgreSQL)</h3>
-                            <pre class="text-xs bg-slate-800 p-4 rounded-lg font-mono">
-CREATE TABLE center (
-  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  center_code TEXT NOT NULL UNIQUE,
-  name TEXT NOT NULL,
-  status TEXT NOT NULL DEFAULT 'active'
+                            <h3 class="font-bold text-lg mb-4 text-white">무손실 스키마 (PostgreSQL 100% 발췌)</h3>
+                            <pre class="text-xs bg-slate-800 p-4 rounded-lg font-mono text-emerald-300">
+CREATE TABLE centers (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    center_code TEXT NOT NULL UNIQUE, -- 테넌트 식별자
+    name TEXT NOT NULL,
+    status TEXT NOT NULL DEFAULT 'active'
 );
-
-CREATE TABLE consent_grant (
-  id UUID PRIMARY KEY,
-  member_profile_id UUID NOT NULL REFERENCES member_profile(id),
-  center_id UUID NOT NULL REFERENCES center(id),
-  scope TEXT NOT NULL, -- 'workout'|'nutrition'|'biometrics'
-  status TEXT NOT NULL DEFAULT 'active'
+CREATE TABLE center_seats (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    center_id UUID NOT NULL REFERENCES centers(id),
+    seat_code TEXT NOT NULL, -- 트레이너 하위코드
+    user_id UUID REFERENCES users(id)
 );
-
-CREATE TABLE audit_event (
-  id UUID PRIMARY KEY,
-  occurred_at TIMESTAMPTZ DEFAULT now(),
-  action TEXT NOT NULL, -- 'EXPORT_DATA', 'VIEW_TRANSCRIPT'
-  actor_user_id UUID,
-  details_json JSONB
+CREATE TABLE data_share_grants (
+    id UUID PRIMARY KEY,
+    user_id UUID NOT NULL REFERENCES users(id),
+    from_center_id UUID REFERENCES centers(id),
+    to_center_id UUID NOT NULL REFERENCES centers(id),
+    scopes consent_scope[] NOT NULL
 );</pre>
                         </div>
                     </div>
@@ -478,17 +461,22 @@ CREATE TABLE audit_event (
                     <h3 class="font-bold text-lg mb-4 text-slate-800">핵심 엔티티 관계도 (ERD)</h3>
                     <div class="mermaid">
                         erDiagram
-                          CENTER ||--o{ CENTER_MEMBER : "has"
-                          USER_ACCOUNT ||--o{ CENTER_MEMBER : "participates"
-                          USER_ACCOUNT ||--o{ MEMBER_PROFILE : "owns"
-                          CENTER ||--o{ SUBSCRIPTION : "billed_by"
-                          USER_ACCOUNT ||--o{ CONSENT_GRANT : "grants"
-                          CENTER ||--o{ CONSENT_GRANT : "receives"
-                          MEMBER_PROFILE ||--o{ DAILY_PLAN : "writes"
-                          MEMBER_PROFILE ||--o{ WORKOUT_SESSION : "performs"
-                          WORKOUT_SESSION ||--o{ RECORDING : "has"
-                          RECORDING ||--o{ TRANSCRIPT : "produces"
-                          USER_ACCOUNT ||--o{ AUDIT_EVENT : "triggers"
+                            centers ||--o{ center_seats : has
+                            users ||--o{ user_roles : has
+                            centers ||--o{ memberships : sells
+                            users ||--o{ members : is
+                            centers ||--o{ members : enrolls
+                            members ||--o{ workout_sessions : performs
+                            workout_sessions ||--o{ workout_sets : contains
+                            members ||--o{ daily_plans : writes
+                            members ||--o{ digital_twins : owns
+                            digital_twins ||--o{ prescriptions : receives
+                            users ||--o{ consents : gives
+                            users ||--o{ data_share_grants : grants
+                            centers ||--o{ subscriptions : billed
+                            users ||--o{ audit_logs : actions
+                            workout_sessions ||--o{ recordings : has
+                            recordings ||--o{ transcripts : produces
                     </div>
                 </div>
             </div>
@@ -498,65 +486,49 @@ CREATE TABLE audit_event (
             =========================================== -->
             <div id="security" class="tab-content">
                 <div class="mb-10 text-center">
-                    <h2 class="text-3xl font-extrabold text-slate-900">강력한 규제 준수 및 IP/보안 통제</h2>
-                    <p class="mt-3 text-slate-600">개인정보보호법(PIPA), OWASP LLM, NIST 표준, Electron Sandboxing</p>
+                    <h2 class="text-3xl font-extrabold text-slate-900">규제 준수 및 AI/IoT 보안 거버넌스</h2>
+                    <p class="mt-3 text-slate-600">PIPA(건강 민감정보), OWASP LLM Top 10, NIST, Electron 보안</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                    <!-- IP Risk Management -->
-                    <div class="glass-panel p-8 rounded-2xl">
-                        <div class="flex items-center mb-4">
-                            <i class="fas fa-balance-scale text-primary text-2xl mr-3"></i>
-                            <h3 class="text-xl font-bold text-slate-800">특허 및 IP 리스크 관리 전략</h3>
-                        </div>
-                        <p class="text-sm text-slate-600 mb-4">경쟁사 및 선행 특허가 밀집된 영역을 파악하여 구현 우선순위 및 회피 전략을 수립합니다.</p>
-                        <ul class="space-y-4">
-                            <li class="p-3 bg-red-50 border border-red-200 rounded-lg">
-                                <span class="inline-block px-2 py-1 bg-red-100 text-red-700 text-xs font-bold rounded mb-1">High Risk (혼잡 영역)</span>
-                                <p class="text-sm text-slate-800">음식 사진 기반 칼로리 자동 추정, ML 기반 맞춤형 운동 추천.<br><span class="text-xs text-slate-500">→ 완전 자동화 대신 '매니저/코치 승인(Human-in-the-loop)' 프로세스로 우회.</span></p>
-                            </li>
-                            <li class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg">
-                                <span class="inline-block px-2 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded mb-1">Low Risk (우선 구현)</span>
-                                <p class="text-sm text-slate-800">멀티테넌트 센터운영, 동의 기반 데이터 이식(공유), 보안 감사 및 접속 로깅.<br><span class="text-xs text-slate-500">→ IT 거버넌스 중심으로 플랫폼 차별화 동력 확보.</span></p>
-                            </li>
-                        </ul>
-                    </div>
-
                     <!-- Compliance & PIPA -->
                     <div class="glass-panel p-8 rounded-2xl">
                         <div class="flex items-center mb-4">
                             <i class="fas fa-file-contract text-primary text-2xl mr-3"></i>
-                            <h3 class="text-xl font-bold text-slate-800">PIPA (한국) 및 생체정보 가이드라인</h3>
+                            <h3 class="text-xl font-bold text-slate-800">PIPA (한국) 및 생체정보 제어</h3>
                         </div>
-                        <p class="text-sm text-slate-600 mb-4">Sprintapp의 방침(HealthKit 제한 등)을 넘어서는 엔터프라이즈급 준수 내재화.</p>
+                        <p class="text-sm text-slate-600 mb-4">Sprintapp의 방침을 넘어서는 엔터프라이즈급 준수 내재화.</p>
                         <div class="space-y-3 text-sm text-slate-700">
-                            <div class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-2"></i> <div><strong>별도 동의 체계:</strong> 신체/건강 정보는 민감정보로 분류되므로 번들링 금지, 별도 동의(Separate Consent) 및 철회권 강제 보장.</div></div>
-                            <div class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-2"></i> <div><strong>논리적 분리 보관:</strong> 결제 정보, 오디오 원본, 생체 정보는 암호화 키 분리 및 접근 제어 적용.</div></div>
-                            <div class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-2"></i> <div><strong>감사(Audit) 대시보드:</strong> '유출/오남용 가시화 대시보드'를 센터장 및 회원에게 제공하여 투명성 입증.</div></div>
+                            <div class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-2"></i> <div><strong>제23조 (별도 동의):</strong> 신체/건강 정보는 민감정보이므로 번들링 불가. 별도 동의(Separate Consent) UX 강제.</div></div>
+                            <div class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-2"></i> <div><strong>제24조 (고유식별정보):</strong> 센터 식별 시 주민/사업자번호를 노출하지 않고 UUID(CenterCode) 활용.</div></div>
+                            <div class="flex items-start"><i class="fas fa-check-circle text-accent mt-1 mr-2"></i> <div><strong>감사(Audit) 대시보드:</strong> 유출/오남용 가시화 대시보드를 제품 기능으로 상용화(조회 로그 제공).</div></div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- LLM Security -->
-                    <div class="bg-dark p-8 rounded-2xl text-white shadow-lg border border-slate-700">
-                        <h3 class="text-xl font-bold mb-4 text-white"><i class="fas fa-robot text-blue-400 mr-2"></i>OWASP LLM Top 10 & NIST AI RMF</h3>
-                        <ul class="space-y-4 text-sm text-slate-300">
-                            <li><strong>1. 프롬프트 경계 (Prompt-Boundary)</strong><br>시스템 지침 및 도구 호출 구조는 서버 런타임에만 저장, 클라이언트 노출 완벽 차단.</li>
-                            <li><strong>2. 권한의 최소화 (Tool Permissioning)</strong><br>LLM 에이전트가 호출 가능한 도구를 센터 역할(RBAC) 기준으로 철저히 제약.</li>
-                            <li><strong>3. 결과물 검증 (Output Validation)</strong><br>AI 생성 결과가 'DB 쓰기/결제/권한 변경'으로 직결되지 않도록 <span class="text-accent font-bold">승인 워크플로우</span> 강제.</li>
-                        </ul>
                     </div>
 
                     <!-- Electron Security -->
                     <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200">
-                        <h3 class="text-xl font-bold mb-4 text-slate-800"><i class="fab fa-js text-yellow-500 mr-2"></i>Electron 샌드박싱 (Desktop 음성 녹취)</h3>
-                        <p class="text-sm text-slate-600 mb-4">클라이언트 PC 침해를 전제로 한 데스크톱 방어벽 구축(권한 최소화).</p>
+                        <h3 class="text-xl font-bold mb-4 text-slate-800"><i class="fab fa-js text-yellow-500 mr-2"></i>Electron 데스크톱 보안 (상담 녹취용)</h3>
+                        <p class="text-sm text-slate-600 mb-4">상담실 PC 침해를 전제로 한 데스크톱 방어벽(권한 최소화).</p>
                         <ul class="space-y-3 text-sm text-slate-700 font-mono">
                             <li class="bg-white p-2 rounded border border-slate-200"><code>contextIsolation: true</code> <span class="font-sans text-xs text-slate-500 ml-1">Renderer API 노출 차단</span></li>
                             <li class="bg-white p-2 rounded border border-slate-200"><code>sandbox: true</code> <span class="font-sans text-xs text-slate-500 ml-1">OS 시스템 자원 접근 통제</span></li>
                             <li class="bg-white p-2 rounded border border-slate-200"><code>nodeIntegration: false</code> <span class="font-sans text-xs text-slate-500 ml-1">Node API 금지</span></li>
-                            <li class="bg-white p-2 rounded border border-slate-200 text-xs font-sans">IPC 통신은 제한된 의도(Intent) 기반 명령어(ex: <code>saveRecording</code>)만 허용</li>
+                            <li class="bg-white p-2 rounded border border-slate-200 text-xs font-sans">Preload.js 통신은 <code>saveEncryptedAudio(blob)</code> 등 제한적 Intent만 허용</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- LLM Security -->
+                <div class="bg-dark p-8 rounded-2xl text-white shadow-lg border border-slate-700 w-full">
+                    <h3 class="text-xl font-bold mb-4 text-white"><i class="fas fa-robot text-indigo-400 mr-2"></i>OWASP LLM Top 10 기반 에이전트 가드레일</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <ul class="space-y-4 text-sm text-slate-300">
+                            <li><strong class="text-indigo-300">LLM01 (프롬프트 인젝션)</strong><br>시스템 지침 및 도구 호출 구조는 서버 런타임에만 저장, 클라이언트 노출 차단.</li>
+                            <li><strong class="text-indigo-300">LLM02 (불안전한 출력 처리)</strong><br>AI 출력이 DB 쓰기/결제로 직결되지 않게 스키마 검증 및 Human-in-the-loop 적용.</li>
+                        </ul>
+                        <ul class="space-y-4 text-sm text-slate-300">
+                            <li><strong class="text-indigo-300">LLM06 (민감정보 노출)</strong><br>LLM 전달 전 정규식으로 PII(식별정보)를 마스킹.</li>
+                            <li><strong class="text-indigo-300">LLM08 (과도한 에이전시)</strong><br>결제, 권한부여, 데이터 공유는 AI 자동화 불가, 인간의 최종 승인 강제.</li>
                         </ul>
                     </div>
                 </div>
@@ -567,87 +539,94 @@ CREATE TABLE audit_event (
             =========================================== -->
             <div id="business" class="tab-content">
                 <div class="mb-10 text-center">
-                    <h2 class="text-3xl font-extrabold text-slate-900">비즈니스 수익 모델 및 18개월 로드맵</h2>
-                    <p class="mt-3 text-slate-600">0.4억(예창패) 예산 기준 MVP 실행 계획 및 ARPA 36만원 기준 프로젝션</p>
+                    <h2 class="text-3xl font-extrabold text-slate-900">수익 모델 및 18개월 KPI 시나리오</h2>
+                    <p class="mt-3 text-slate-600">예산 4,000만 원(0.4억) 배분 계획 및 12주 MVP 실행 로드맵</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
                     <!-- Pricing Structure -->
                     <div class="glass-panel p-6 rounded-2xl">
-                        <h3 class="text-xl font-bold mb-4 text-slate-800 border-b border-slate-200 pb-2">수익화 4축 모델 (B2B SaaS)</h3>
+                        <h3 class="text-xl font-bold mb-4 text-slate-800 border-b border-slate-200 pb-2">센터 요금제 플랜 (B2B SaaS)</h3>
                         <table class="min-w-full text-sm mt-4">
                             <tbody class="divide-y divide-slate-100">
                                 <tr class="hover:bg-slate-50">
-                                    <td class="py-3 font-bold text-primary w-1/3">1. 베이스 구독</td>
-                                    <td class="py-3 text-slate-600">센터 단위 월정액 (Core/Pro/Ent). B2B 영업 장벽 낮춤.</td>
+                                    <td class="py-3 font-bold text-primary w-1/3">Basic (14.9만)</td>
+                                    <td class="py-3 text-slate-600">트레이너 Seat 2명 포함. 회원관리, 예약, 기록, 리포트. (추가 Seat 당 2.9만)</td>
                                 </tr>
                                 <tr class="hover:bg-slate-50">
-                                    <td class="py-3 font-bold text-primary w-1/3">2. 트레이너 좌석(Seat)</td>
-                                    <td class="py-3 text-slate-600">기본 좌석 초과 시 계정당 추가 과금 (레버리지 확보)</td>
+                                    <td class="py-3 font-bold text-primary w-1/3">Pro (29.9만)</td>
+                                    <td class="py-3 text-slate-600">Seat 6명. Basic + Seeker AI 인사이트, 디지털 트윈 기능. (추가 Seat 2.5만)</td>
                                 </tr>
                                 <tr class="hover:bg-slate-50">
-                                    <td class="py-3 font-bold text-primary w-1/3">3. 결제 Take-rate</td>
-                                    <td class="py-3 text-slate-600">회원권/상품 결제 시 PG 수수료 외 플랫폼 수수료 수취</td>
+                                    <td class="py-3 font-bold text-primary w-1/3">Enterprise (59.9만)</td>
+                                    <td class="py-3 text-slate-600">Seat 20명. Pro + 고급 보안 관제 대시보드 및 리스크 통제.</td>
                                 </tr>
                                 <tr class="hover:bg-slate-50">
-                                    <td class="py-3 font-bold text-primary w-1/3">4. IoT 리스/관리</td>
-                                    <td class="py-3 text-slate-600">스마트 게이트웨이/디바이스 연동 월정액 (장기 락인)</td>
+                                    <td class="py-3 font-bold text-accent w-1/3">결제 Take-rate</td>
+                                    <td class="py-3 text-slate-600">플랫폼 내 회원권/상품 결제 시 트랜잭션 수수료 부과.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
-                    <!-- Unit Economics -->
+                    <!-- Budget & Unit Economics -->
                     <div class="bg-primary p-6 rounded-2xl text-white shadow-lg">
-                        <h3 class="text-xl font-bold mb-4 text-white border-b border-blue-800 pb-2">유닛 이코노믹스 핵심 KPI (기준 시나리오)</h3>
-                        <div class="grid grid-cols-2 gap-4 text-center mt-6">
-                            <div class="bg-blue-800/50 p-4 rounded-xl border border-blue-700">
-                                <p class="text-blue-200 text-xs mb-1">고객 획득 비용 (CAC)</p>
-                                <p class="text-xl font-bold text-white">1,200,000 원</p>
+                        <div class="flex justify-between items-center border-b border-indigo-500 pb-2 mb-4">
+                            <h3 class="text-xl font-bold">유닛 이코노믹스 및 4천만원 예산</h3>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 text-center mb-6">
+                            <div class="bg-indigo-800/50 p-3 rounded-xl">
+                                <p class="text-indigo-200 text-xs mb-1">고객 획득 비용 (CAC)</p>
+                                <p class="text-lg font-bold">120만 원</p>
                             </div>
-                            <div class="bg-blue-800/50 p-4 rounded-xl border border-blue-700">
-                                <p class="text-blue-200 text-xs mb-1">월 객단가 (ARPA)</p>
-                                <p class="text-xl font-bold text-white">360,000 원</p>
+                            <div class="bg-indigo-800/50 p-3 rounded-xl">
+                                <p class="text-indigo-200 text-xs mb-1">단순 생애가치 (LTV)</p>
+                                <p class="text-lg font-bold">1,123만 원</p>
                             </div>
-                            <div class="bg-blue-800/50 p-4 rounded-xl border border-blue-700">
-                                <p class="text-blue-200 text-xs mb-1">단순 생애가치 (LTV)</p>
-                                <p class="text-xl font-bold text-white">11.2 백만원</p>
+                            <div class="bg-indigo-800/50 p-3 rounded-xl">
+                                <p class="text-indigo-200 text-xs mb-1">월 평균 객단가 (ARPA)</p>
+                                <p class="text-lg font-bold text-accent">36만 원</p>
                             </div>
-                            <div class="bg-blue-800/50 p-4 rounded-xl border border-blue-700">
-                                <p class="text-blue-200 text-xs mb-1">CAC 회수 기간</p>
-                                <p class="text-xl font-bold text-emerald-400">4.3 개월</p>
+                            <div class="bg-indigo-800/50 p-3 rounded-xl">
+                                <p class="text-indigo-200 text-xs mb-1">CAC 회수 기간</p>
+                                <p class="text-lg font-bold text-accent">4.3개월</p>
                             </div>
                         </div>
+                        
+                        <h4 class="text-sm font-bold text-indigo-200 mb-2">초기 0.4억 예산 배분</h4>
+                        <ul class="text-xs space-y-1 text-indigo-100">
+                            <li><span class="inline-block w-8 text-accent">70%</span> 제품/백엔드/앱 개발 인건비 (2,800만)</li>
+                            <li><span class="inline-block w-8 text-accent">10%</span> 디자인/UX (Wellness EZ) (400만)</li>
+                            <li><span class="inline-block w-8 text-accent">15%</span> 인프라(5%), AI API(5%), 보안/컴플(5%) (각 200만)</li>
+                            <li><span class="inline-block w-8 text-accent">5%</span> 마케팅/파일럿 론칭 (100만), 예비비 (100만)</li>
+                        </ul>
                     </div>
                 </div>
 
                 <!-- Financial Chart & Roadmap -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div class="glass-panel p-6 rounded-2xl border border-slate-200 w-full overflow-hidden">
-                        <h3 class="text-lg font-bold mb-4 text-slate-800">18개월 재무 시나리오 기반 MRR 추이</h3>
+                        <h3 class="text-lg font-bold mb-4 text-slate-800">18개월 재무 시나리오 (MRR 예측)</h3>
                         <div class="h-64 w-full">
                             <canvas id="financeChart"></canvas>
                         </div>
-                        <p class="text-xs text-slate-400 text-center mt-2">* 18개월 공격적 누적 총이익(GM 78% 가정): 9.1억원 예상</p>
+                        <p class="text-xs text-slate-400 text-center mt-2">* 18개월 공격적 누적 총이익(GM 78% 가정): 11.7억 매출 타겟</p>
                     </div>
                     
                     <div class="glass-panel p-6 rounded-2xl border border-slate-200 w-full overflow-x-auto">
-                        <h3 class="text-lg font-bold mb-4 text-slate-800">0.4억(예창패) 기반 12개월 타임라인</h3>
+                        <h3 class="text-lg font-bold mb-4 text-slate-800">DipFit 12주 MVP 실행 로드맵</h3>
                         <div class="mermaid text-sm">
                             timeline
-                              title MVP to Scale 로드맵
-                              section 0~3개월
-                                아키텍처 구축
-                                멀티테넌트 및 권한
-                                CRM 및 기록 MVP
-                              section 3~6개월
-                                결제 및 정산 연동
-                                데이터 공유 UI
-                                보안 관제 대시보드 v1
-                              section 6~12개월
-                                STT 및 음성 녹취
-                                파트너 IoT 연동
-                                엔터프라이즈 SSO
+                                title DipFit 12-Week MVP Roadmap
+                                section M1 (Core & Auth)
+                                    Week 1-2 : Architecture, OmniWell Onboarding
+                                    Week 3-4 : Membership CRM, Schedule MVP
+                                section M2 (Wellness)
+                                    Week 5-6 : Workout/Nutrition Logging, Daily Plan
+                                    Week 7-8 : Admin Dashboard, Seeker v1
+                                section M3 (AI & Beta)
+                                    Week 9-10 : Voice Recording (Electron), STT API
+                                    Week 11-12 : Data Portability, 3개 센터 Pilot
                         </div>
                     </div>
                 </div>
@@ -658,48 +637,48 @@ CREATE TABLE audit_event (
             =========================================== -->
             <div id="tech" class="tab-content">
                 <div class="mb-10 text-center">
-                    <h2 class="text-3xl font-extrabold text-slate-900">추천 오픈소스 라이브러리 및 API 생태계</h2>
-                    <p class="mt-3 text-slate-600">Github 스타 수 및 라이선스 기반 검증 스택 (2026년 기준)</p>
+                    <h2 class="text-3xl font-extrabold text-slate-900">추천 오픈소스 라이브러리 및 외부 API 스펙</h2>
+                    <p class="mt-3 text-slate-600">2026년 기준 벤치마크 (Stars/최신 릴리스 기반)</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <!-- Open Source Tools -->
                     <div>
-                        <h3 class="text-xl font-bold mb-4 text-slate-800 flex items-center"><i class="fab fa-github text-slate-800 mr-2"></i>주요 오픈소스 라이브러리</h3>
+                        <h3 class="text-xl font-bold mb-4 text-slate-800 flex items-center"><i class="fab fa-github text-slate-800 mr-2"></i>주요 오픈소스 스택 (TypeScript 중심)</h3>
                         <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
                             <table class="min-w-full text-sm divide-y divide-slate-200">
                                 <thead class="bg-slate-50">
                                     <tr>
                                         <th class="px-4 py-3 text-left font-bold text-slate-700">영역</th>
                                         <th class="px-4 py-3 text-left font-bold text-slate-700">라이브러리 (Stars)</th>
-                                        <th class="px-4 py-3 text-left font-bold text-slate-700">라이선스</th>
+                                        <th class="px-4 py-3 text-left font-bold text-slate-700">강점/채택 사유</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-100">
                                     <tr>
-                                        <td class="px-4 py-3 font-semibold text-slate-800">백엔드 / API</td>
-                                        <td class="px-4 py-3 text-slate-600">NestJS (74.8k) / tRPC (39.7k)</td>
-                                        <td class="px-4 py-3 text-slate-500"><span class="bg-slate-100 px-2 py-1 rounded border">MIT</span></td>
+                                        <td class="px-4 py-3 font-semibold text-slate-800">Backend 코어</td>
+                                        <td class="px-4 py-3 text-primary font-bold">NestJS (74.8k)</td>
+                                        <td class="px-4 py-3 text-slate-500">엔터프라이즈 구조, DDD 모듈화 특화</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 font-semibold text-slate-800">Type-Safe API</td>
+                                        <td class="px-4 py-3 text-slate-600">tRPC (39.7k)</td>
+                                        <td class="px-4 py-3 text-slate-500">프론트-백 타입 일치로 개발 속도 증폭</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-3 font-semibold text-slate-800">ORM (DB)</td>
-                                        <td class="px-4 py-3 text-slate-600">Prisma (45.4k) / Drizzle (33.1k)</td>
-                                        <td class="px-4 py-3 text-slate-500"><span class="bg-slate-100 px-2 py-1 rounded border">Apache-2.0</span></td>
+                                        <td class="px-4 py-3 text-slate-600">Prisma (45.4k) / Drizzle</td>
+                                        <td class="px-4 py-3 text-slate-500">생산성 및 마이그레이션 관리 (Apache-2.0)</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-3 font-semibold text-slate-800">Desktop 앱</td>
-                                        <td class="px-4 py-3 text-slate-600">Electron Forge (7k) / builder</td>
-                                        <td class="px-4 py-3 text-slate-500"><span class="bg-slate-100 px-2 py-1 rounded border">MIT</span></td>
+                                        <td class="px-4 py-3 text-slate-600">Electron Forge (7k)</td>
+                                        <td class="px-4 py-3 text-slate-500">보안 녹취를 위한 OS 격리(Sandbox) 래핑</td>
                                     </tr>
                                     <tr>
-                                        <td class="px-4 py-3 font-semibold text-slate-800">로컬 STT</td>
+                                        <td class="px-4 py-3 font-semibold text-slate-800">STT (로컬)</td>
                                         <td class="px-4 py-3 text-slate-600">whisper.cpp (47.2k)</td>
-                                        <td class="px-4 py-3 text-slate-500"><span class="bg-slate-100 px-2 py-1 rounded border">MIT</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="px-4 py-3 font-semibold text-slate-800">오디오 UI/녹취</td>
-                                        <td class="px-4 py-3 text-slate-600">wavesurfer.js / RecordRTC</td>
-                                        <td class="px-4 py-3 text-slate-500"><span class="bg-slate-100 px-2 py-1 rounded border">BSD/MIT</span></td>
+                                        <td class="px-4 py-3 text-slate-500">저메모리 C++ 포팅, 비용/보안 방어</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -708,41 +687,41 @@ CREATE TABLE audit_event (
 
                     <!-- API Vendors -->
                     <div>
-                        <h3 class="text-xl font-bold mb-4 text-slate-800 flex items-center"><i class="fas fa-cloud text-primary mr-2"></i>음성 및 AI 상용 API 비교</h3>
+                        <h3 class="text-xl font-bold mb-4 text-slate-800 flex items-center"><i class="fas fa-cloud text-primary mr-2"></i>AI 및 데이터 연동 API (MVP 용)</h3>
                         <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
                             <table class="min-w-full text-sm divide-y divide-slate-200">
                                 <thead class="bg-slate-50">
                                     <tr>
                                         <th class="px-4 py-3 text-left font-bold text-slate-700">제공자</th>
                                         <th class="px-4 py-3 text-left font-bold text-slate-700">서비스</th>
-                                        <th class="px-4 py-3 text-left font-bold text-slate-700">무료 티어 / 단가 예시</th>
+                                        <th class="px-4 py-3 text-left font-bold text-slate-700">무료 티어 / 요금</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-100">
                                     <tr>
-                                        <td class="px-4 py-3 font-bold text-primary">Deepgram</td>
-                                        <td class="px-4 py-3 text-slate-600">STT / TTS</td>
-                                        <td class="px-4 py-3 text-slate-500">$200 무료 크레딧<br><span class="text-xs bg-yellow-100 px-1 rounded">STT: ~$0.0077/min</span></td>
+                                        <td class="px-4 py-3 font-bold text-primary">OpenAI</td>
+                                        <td class="px-4 py-3 text-slate-600">LLM (Seeker)</td>
+                                        <td class="px-4 py-3 text-slate-500">gpt-4o ($0.006/min), 미니 지원</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-3 font-bold text-primary">AssemblyAI</td>
-                                        <td class="px-4 py-3 text-slate-600">STT</td>
-                                        <td class="px-4 py-3 text-slate-500">녹음 185h / 스트리밍 333h 무료<br><span class="text-xs bg-yellow-100 px-1 rounded">초과: ~$0.15/hr</span></td>
+                                        <td class="px-4 py-3 text-slate-600">클라우드 STT</td>
+                                        <td class="px-4 py-3 text-slate-500">사전녹음 185h 무료 / 초과 $0.15/hr</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-3 font-bold text-primary">Deepgram</td>
+                                        <td class="px-4 py-3 text-slate-600">STT / TTS</td>
+                                        <td class="px-4 py-3 text-slate-500">$200 크레딧 / PII Redaction 옵션 강점</td>
                                     </tr>
                                     <tr>
                                         <td class="px-4 py-3 font-bold text-primary">ElevenLabs</td>
-                                        <td class="px-4 py-3 text-slate-600">TTS / STT</td>
-                                        <td class="px-4 py-3 text-slate-500">월 10k 문자 무료<br><span class="text-xs bg-yellow-100 px-1 rounded">STT: ~$0.22/hr</span></td>
+                                        <td class="px-4 py-3 text-slate-600">음성/TTS</td>
+                                        <td class="px-4 py-3 text-slate-500">10k 문자 무료 / 고품질 응답</td>
                                     </tr>
                                     <tr>
-                                        <td class="px-4 py-3 font-bold text-primary">OpenAI</td>
-                                        <td class="px-4 py-3 text-slate-600">LLM (보조)</td>
-                                        <td class="px-4 py-3 text-slate-500">토큰 과금 모델<br><span class="text-xs text-slate-400">오디오 토큰 가이드 제공</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="px-4 py-3 font-bold text-primary">USDA (영양)</td>
-                                        <td class="px-4 py-3 text-slate-600">FoodData DB</td>
-                                        <td class="px-4 py-3 text-slate-500">시간당 1,000회 무료 (CC0)</td>
+                                        <td class="px-4 py-3 font-bold text-primary">USDA FDC</td>
+                                        <td class="px-4 py-3 text-slate-600">식품 영양 DB</td>
+                                        <td class="px-4 py-3 text-slate-500">상업무료(CC0), 1k req/hr 제한</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -757,7 +736,7 @@ CREATE TABLE audit_event (
     <!-- Footer -->
     <footer class="bg-slate-900 border-t border-slate-800 text-slate-400 py-10 mt-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <p class="mb-2 font-bold text-white tracking-widest">FitOS AI·IoT PLATFORM BLUEPRINT</p>
+            <p class="mb-2 font-bold text-white tracking-widest">DipFit - Wellness EZ Platform</p>
             <p>본 페이지는 프로젝트 구조 및 벤치마크 설계안을 시각화한 대시보드 형태의 문서입니다.</p>
         </div>
     </footer>
@@ -837,31 +816,32 @@ CREATE TABLE audit_event (
             distList.innerHTML = ''; // Clear old
 
             if(isTrainingDay) {
-                // Training Day (4 Meals) - Pre 15/7.5%, Post1 40/0%, Post2 35/10%, Remainder
+                // Training Day (5 Meals based on new doc) - Pre 15/7.5%, Post1 40/0%, Post2 35/10%, Remainder distributed
                 const meals = [
                     { name: "식사 1 (Pre-workout)", cRate: 0.15, fRate: 0.075 },
-                    { name: "식사 2 (Post-workout #1)", cRate: 0.40, fRate: 0.0 },
-                    { name: "식사 3 (Post-workout #2)", cRate: 0.35, fRate: 0.10 },
-                    { name: "식사 4 (Remainder)", cRate: 0.10, fRate: 0.825 }
+                    { name: "식사 2 (Post-workout 1)", cRate: 0.40, fRate: 0.0 },
+                    { name: "식사 3 (Post-workout 2)", cRate: 0.35, fRate: 0.10 },
+                    { name: "식사 4 (Remainder 1)", cRate: 0.05, fRate: 0.4125 },
+                    { name: "식사 5 (Remainder 2)", cRate: 0.05, fRate: 0.4125 }
                 ];
                 
-                const proPerMeal = Math.round(proteinGrams / 4);
+                const proPerMeal = Math.round(proteinGrams / 5);
 
                 meals.forEach(m => {
                     const cG = Math.round(carbGrams * m.cRate);
                     const fG = Math.round(fatGrams * m.fRate);
-                    const cal = (proPerMeal * 4) + (cG * 4) + (fG * 9);
+                    const cal = Math.round((proPerMeal * 4) + (cG * 4) + (fG * 9));
                     distList.innerHTML += `<li class="flex justify-between border-b border-slate-700 pb-1"><span><i class="fas fa-utensils text-slate-500 mr-2"></i>${m.name}</span> <span class="text-white">${cal} kcal <span class="text-slate-500 text-[10px] ml-1">(단${proPerMeal}/탄${cG}/지${fG})</span></span></li>`;
                 });
             } else {
-                // Rest Day (Even Distribution)
+                // Rest Day (4 Meals Even Distribution)
                 const proPerMeal = Math.round(proteinGrams / 4);
                 const carbPerMeal = Math.round(carbGrams / 4);
                 const fatPerMeal = Math.round(fatGrams / 4);
                 const cal = Math.round(targetCalories / 4);
 
                 for(let i=1; i<=4; i++) {
-                    distList.innerHTML += `<li class="flex justify-between border-b border-slate-700 pb-1"><span><i class="fas fa-utensils text-slate-500 mr-2"></i>일반 식사 ${i}</span> <span class="text-white">${cal} kcal <span class="text-slate-500 text-[10px] ml-1">(단${proPerMeal}/탄${carbPerMeal}/지${fatPerMeal})</span></span></li>`;
+                    distList.innerHTML += `<li class="flex justify-between border-b border-slate-700 pb-1"><span><i class="fas fa-utensils text-slate-500 mr-2"></i>휴식일 식사 ${i}</span> <span class="text-white">${cal} kcal <span class="text-slate-500 text-[10px] ml-1">(단${proPerMeal}/탄${carbPerMeal}/지${fatPerMeal})</span></span></li>`;
                 }
             }
         }
@@ -873,7 +853,7 @@ CREATE TABLE audit_event (
         function renderChart() {
             const ctx = document.getElementById('financeChart').getContext('2d');
             
-            const arpa = 360000; // 36만원
+            const arpa = 360000; // 36만원 (구독+좌석+결제 평균)
             const months = ['M0', 'M6', 'M12', 'M18'];
             
             // Centers Count per scenario
@@ -889,8 +869,8 @@ CREATE TABLE audit_event (
                         {
                             label: '공격적 뷰 (Centers: 500)',
                             data: aggCenters.map(c => c * arpa),
-                            borderColor: '#3b82f6', // secondary
-                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            borderColor: '#4f46e5', // indigo-600
+                            backgroundColor: 'rgba(79, 70, 229, 0.1)',
                             borderWidth: 3,
                             fill: true,
                             tension: 0.3
@@ -898,7 +878,7 @@ CREATE TABLE audit_event (
                         {
                             label: '기준 뷰 (Centers: 200)',
                             data: baseCenters.map(c => c * arpa),
-                            borderColor: '#10b981', // accent
+                            borderColor: '#10b981', // emerald-500
                             borderWidth: 2,
                             borderDash: [5, 5],
                             tension: 0.3
